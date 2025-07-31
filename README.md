@@ -71,23 +71,31 @@ cd nest-mail-queue
 * Dica para testes de envio de email: utilizar o ethereal `https://ethereal.email/login`
 
 ```env
-REDIS_HOST=localhost
-REDIS_PORT=6379
+PORT=3001
 
-SMTP_HOST=smtp.seuservidor.com
+# SMTP (Ethereal para testes)
+SMTP_HOST=smtp.ethereal.email
 SMTP_PORT=587
-SMTP_USER=seu@dominio.com
-SMTP_PASS=sua_senha
-FROM_EMAIL=seu@dominio.com
-FROM_NAME=Seu Nome
+SMTP_USER=
+SMTP_PASS=
+
+# Redis
+# RODANDO EM DOCKER
+# REDIS_HOST=redis
+
+# RODANDO LOCALMENTE
+REDIS_HOST=localhost
+
+REDIS_PORT=6379
 ```
 
 #### `api-gateway/.env`
 
 ```env
-EMAIL_SERVICE_URL=http://localhost:3001
 PORT=3000
-JWT_SECRET=sua_chave_secreta
+
+# Email Service URL
+EMAIL_SERVICE_URL=http://localhost:3001
 ```
 
 ---
