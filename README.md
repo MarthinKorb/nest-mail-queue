@@ -60,7 +60,7 @@ graph LR
 ### 1. Clonar o projeto
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone [https://github.com/seu-usuario/seu-repo.git](https://github.com/MarthinKorb/nest-mail-queue.git)
 cd seu-repo
 ```
 
